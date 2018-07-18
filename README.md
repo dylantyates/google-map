@@ -10,6 +10,7 @@ This fork is using [v2.0.3](https://github.com/GoogleWebComponents/google-map/tr
              google.maps.event.removeListener(this._listeners[name]);
              this._listeners[name] = null;
            }
+    }
 ```
 
 
