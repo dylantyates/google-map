@@ -1,8 +1,16 @@
 google-map
 ==========
 
-If you are seeking a smaller, simplified version of `google-map`, we recommend using
-[`good-map`](https://www.webcomponents.org/element/keanulee/good-map)
+This fork is using [v2.0.3](https://github.com/GoogleWebComponents/google-map/tree/v2.0.3) with the fix for [#407](https://github.com/GoogleWebComponents/google-map/issues/407).
+
+```js
+    _clearListener: function(name) {
+      // Fixes TypeError: Cannot read property of undefined
+      if (this._listeners && this._listeners[name]) {
+             google.maps.event.removeListener(this._listeners[name]);
+             this._listeners[name] = null;
+           }
+```
 
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/GoogleWebComponents/google-map)
